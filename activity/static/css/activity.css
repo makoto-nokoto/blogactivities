@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+body {
+  margin: 0px;
+  padding: 0px;
+  -webkit-text-size-adjust: none;
+  color: #rgba(#181818, 0.7);
+  /*全体の文字色*/
+  font-family: "Century", sans-serif;
+  /*フォント種類*/
+  font-size: 16px;
+  /*文字サイズ*/
+  line-height: 2;
+  /*行間*/
+  background: #fff;
+  /*背景色*/
+}
+h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd, form, img, div {
+  margin: 0px;
+  padding: 0px;
+  font-size: 100%;
+  font-weight: normal;
+}
+h1 {
+  font-size: 2rem;
+}
+main h1{
+  color:rgba(17, 17, 17, 0.85);
+  margin-bottom: 5%
+}
+#like{
+  margin-top: 5%;
+}
+/*
+.container{
+  margin-top: 20%;
+}
+*/
+h2{
+  font-size: 1.5rem;
+}
+h3{
+  margin:0;
+  padding:0;
+  font-size: 1.3rem;
+}
+a{
+  text-decoration: none;
+  border-bottom-style: none;
+  color:rgb(99, 176, 255);
+  transition: 0.3s;
+}
+.hd{
+  position: relative;
+}
+/*s
+#showloading {
+  background-color:#333333;
+  color:rgba(255, 255, 255, 0.6);
+  font-size: 6rem;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-65%, -50%);
+  -webkit-transform: translate(-65%, -50%);
+  transform: translate(50%, 50%);
+}
+*/
+.hd a {
+  position: absolute;
+  color: white;
+  top: 10%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  color: rgb(94, 254, 249);
+  text-decoration: none;
+  border-bottom-style: none;
+}
+#moving {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 0%;
+}
+/*
+body div .sr-only{
+  visibility: visible;
+  text-align: center;
+  font-size: 5rem;
+}*/
+ul {
+  list-style-type: none;
+}
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+header{
+  text-align: center;
+  /*内容を中央よせ*/
+  display: none;
+}
+
+main {
+  display: none;
+  text-align:center;
+}
+footer{
+  display:none;
+}
+#menubar {
+  text-align: center;
+  /*文字をセンタリング*/
+  font-size: 18px;
+  /*文字サイズ*/
+  margin-bottom: 40px;
+  /*下に空けるスペース*/
+}
+#menubar li {
+  display: inline;
+  /*横並びにする設定*/
+}
+
+#menubar li a {
+  text-decoration: none;
+  padding: 15px 30px;
+  /*各メニュー内の余白。上下に15px、左右に30pxあけるという意味。*/
+}
+
+/*マウスオン時の設定*/
+#menubar li a:hover {
+  color: #224acf;
+  /*文字色*/
+  border-bottom: 4px solid rgb(86, 211, 244);
+  /*下線の幅、線種、色*/
+}
+#profile{
+  margin-left:5%;
+  margin-right:5%;
+
+}
