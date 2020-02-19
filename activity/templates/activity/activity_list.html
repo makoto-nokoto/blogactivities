@@ -43,6 +43,16 @@
     </section>
     <section id="actphone">
       <h1>最新のスマホの動き</h1>
+      <div id="smlist">
+        {% for post in posts %}
+        <ul>
+          <li>published: {{ post.published_date }}</li>
+          <li>{{ post.title }}</li>
+          <li>{{post.url}}</li>
+          <li>{{post.text|linebreaksbr }}</li>
+        </ul>
+        {% endfor %}
+      </div>
     </section>
   </main>
   <footer>
