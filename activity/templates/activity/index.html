@@ -1,0 +1,54 @@
+{% extends 'activity/base.html' %}
+
+{% block content %}
+  <main id="mydetails">
+    <h1>自分のこと</h1>
+    <section id="profile" class="card border-light mb-3">
+      <h2 class="card-header">現在</h2>
+      <p class="card-body my-0 font-weight-normal">
+        電気電子の大学生です。このまま生きていくと<br />
+        Pythonに触れなくなるかもしれないからやらざるを得ない環境に逃げ込んだ。<br />
+        静岡県浜松市に住んでます。三重の四日市と熊本の八代にも住んでました。
+      </p>
+    </section>
+    <h1 id="like">好きなこと</h1>
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <section class="card border-light mb-4 shadow-sm" id="math">
+          <h2 class="card-header my-0 font-weight-normal">数学</h2>
+          <p class="card-body">
+            <h3 class="card-title pricing-card-title">興味ある話題はデータ処理です。</h3><br />
+               数字の処理から文字の処理まで気になっています。
+            暗号、グラフとか組み合わせの本を読みたい。RaspberryPiでセンサの値の校正をする際
+            フィルタを使ってプログラムが組みたい。Atcoderをやってます。
+          </p>
+        </section>
+        <section class="card border-light mb-4 shadow-sm" id="python">
+          <h3 class="card-header my-0 font-weight-normal">Python</h2>
+            <p class="card-body">
+              <h3 class="card-title pricing-card-title">やりたいことの核心は</h3>
+              <ul>
+                <li>繰り返しの作業をやってくれること</li>
+                <li>新しいものを作って公開すること</li>
+                <li>かわいい声でしゃべってほしいこと</li>
+              </ul>
+              2020年2月時点ではwebに関連したものを作りたい。
+              Djangoを使ってActivityとTodoを更新する。
+            </p>
+        </section>
+        <section class="card border-light mb-4 shadow-sm" id="novel">
+          <h2 class="card-header my-0 font-weight-normal">小説</h2>
+          <p class="card-body">
+            <h3 class="card-title">私が大好きな作家</h3>
+            <dl>
+              <dt><strong>住野よる</strong></dt>
+              <dd>「また同じ夢を見ていた」や「よるのばけもの」がすき。ていうか基本的に全部好き。</dd>
+              <dt><strong>西尾維新</strong></dt>
+              <dd>物語シリーズしか読んでいないけど好き。どんなふうに生きていたのか気になる。</dd>
+            </dl>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+{% endblock %}

@@ -12,7 +12,7 @@
       <ul>
         <li>published: {{ post.published_date }}</li>
         <li>{{ post.title }}</li>
-        <li>{{post.url}}</li>
+        <li><a href="{{ post.url }}">{{post.url}}</a></li>
         <li>{{post.text|linebreaksbr }}</li>
       </ul>
       {% endfor %}

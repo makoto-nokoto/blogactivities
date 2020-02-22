@@ -21,7 +21,7 @@
   <header id="headpanel">
     <div class="hd">
       <h1>
-        <a href="index.html">makoto_nokoto</a>
+        <a href="{% url 'home_page' %}">makoto_nokoto</a>
       </h1>
       <div id="mainimg">
         <img src="{% static 'images/26025.png' %}" alt="sky-blue" id="skyblue">
@@ -32,16 +32,19 @@
     </div>
     <nav id="menubar">
       <ul>
-        <li><a href="activities.html">Activities</a></li>
-        <li><a href="todo.html">To Do</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="links.html">Links</a></li>
+        <li><a href="{% url 'activity_list' %}">Activities</a></li>
+        <li><a href="{% url 'todo_page' %}">To Do</a></li>
+        <li><a href="{% url 'articles_page' %}">Articles</a></li>
+        <li><a href="{% url 'links_page' %}">Links</a></li>
       </ul>
     </nav>
   </header>
   {% block content %}
   {% endblock %}
   <footer>
+    {% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    {% endif %}
     <div id="upd">
       <time></time>
     </div>
