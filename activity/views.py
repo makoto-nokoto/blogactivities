@@ -4,9 +4,16 @@ from .models import Post
 from .forms import PostForm
 from django.shortcuts import get_object_or_404
 # Create your views here.
-def activity_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'activity/activity_list.html', {'posts': posts})
+#
+
+import httplib2
+import os
+import sys
+from oauth2client.client import flow_from_clientsecrets
+from oauth2client.file import Storage
+from oauth2client.tools import argparser, run_flow
+from django.contrib.auth.models import User
+#
 
 def post_new(request):
     if request.method == "POST":
@@ -36,5 +43,17 @@ def post_edit(request, pk):
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
-        form = PostForm(instance=post)
+            form = PostForm(instance=post)
     return render(request, 'activity/post_edit.html', {'form': form})
+
+def index_page(request):
+    return render(request, 'activity/index.html', {})
+def articles_page(request):
+    return render(request, 'activity/articles.html', {})
+def links_page(request):
+    return render(request, 'activity/links.html', {})
+def todo_page(request):
+    return render(request, 'activity/todo.html', {})
+def activity_list(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'activity/activity_list.html', {'posts': posts})
